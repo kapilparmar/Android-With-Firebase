@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "1042517620460",
+    "firebase_url": "https://signupwithfirebase-7ca98.firebaseio.com",
+    "project_id": "signupwithfirebase-7ca98",
+    "storage_bucket": "signupwithfirebase-7ca98.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1042517620460:android:82c30ac01bd36808",
+        "android_client_info": {
+          "package_name": "com.example.kapil.firebasegps"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1042517620460-v7klq3qkgaucttgsuu2u18hpls27b0dl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfs1wDEADEpz8amRufddzzJ2XwAFLrnuI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
