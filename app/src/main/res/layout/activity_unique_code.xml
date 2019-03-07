@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginActivity">
+    tools:context=".LoginActivity"
+    android:background="@drawable/backgroundbtn1">
 
 
     <LinearLayout
@@ -13,7 +14,8 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true">
+        android:layout_centerHorizontal="true"
+        >
 
 
         <android.support.design.widget.TextInputLayout
@@ -25,9 +27,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:drawableLeft="@drawable/icon_profile"
+                android:drawableLeft="@drawable/ic_person"
                 android:drawablePadding="5dp"
-                android:hint="@string/unique_key"
+                android:hint="unique_key"
                 android:inputType="textEmailAddress"
                 >
 
@@ -46,11 +48,11 @@
             android:layout_marginRight="20dp"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="15dp"
-            android:onClick="submitDetails"
             android:text="Submit Details"
             android:textColor="@android:color/white"
             android:textStyle="bold"
-            android:background="@drawable/button_bg"
+            android:background="@color/Gray"
+            android:onClick="submitDetails"
 
 
             />

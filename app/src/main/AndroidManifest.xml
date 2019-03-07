@@ -2,25 +2,71 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.kapil.firebasegps">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
 
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
-        android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".LoginActivity">
+        android:label="TrackItUp"
+        android:theme="@style/AppTheme"
+        android:fullBackupContent="@xml/backup_descriptor">
+        <activity
+            android:name="com.example.kapil.firebasegps.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".SignUpActivity" />
-        <activity android:name=".UniqueCodeActivity" />
-        <activity android:name=".MainActivity"></activity>
+        <activity android:name="com.example.kapil.firebasegps.UniqueCodeActivity" />
+        <activity android:name="com.example.kapil.firebasegps.SignUp" />
+        <activity android:name="com.example.kapil.firebasegps.ActivityDashBoard" />
+        <activity android:name="com.example.kapil.firebasegps.Contacts"
+            android:label="My Contacts"
+            android:parentActivityName="com.example.kapil.firebasegps.ActivityDashBoard"
+            android:theme="@style/Theme.AppCompat.Light"/>
+        <activity android:name="com.example.kapil.firebasegps.Share" />
+        <activity android:name="com.example.kapil.firebasegps.History" />
+        <activity android:name="com.example.kapil.firebasegps.MapsActivity" />
+
+        <service android:name="com.example.kapil.firebasegps.LocationService" />
+
+        <activity android:name="com.example.kapil.firebasegps.LoginActivity" />
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name="com.example.kapil.firebasegps.Main2Activity"
+            android:label="@string/title_activity_main2"
+            android:theme="@style/AppTheme" />
+        <activity
+            android:name="com.example.kapil.firebasegps.SettingsActivity"
+            android:label="@string/title_activity_settings"></activity>
+
+        <receiver android:name=".NetworkStateReceiver" >
+            <intent-filter>
+                <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

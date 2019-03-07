@@ -3,18 +3,41 @@ package com.example.kapil.firebasegps;
 import java.io.Serializable;
 
 public class UserModel implements Serializable {
-    private String name,email, password,number;
+    private String name,fullname,phone, password,cpassword,number,code, latlong, time;
 
-    public UserModel(String name, String email, String password, String number) {
+    public UserModel(String name, String fullname,String phone, String password, String cpassword) {
         this.name = name;
-        this.email = email;
+        this.fullname = fullname;
+        this.phone=phone;
         this.password = password;
+        this.number=number;
+        this.cpassword=cpassword;
+    }
+
+    public UserModel(String latlong, String time) {
+        this.latlong = latlong;
+        this.time = time;
+    }
+
+    public UserModel(String name, String number,String nam) {
+        this.name = name;
         this.number = number;
     }
 
-    public UserModel(String email, String number) {
-        this.email = email;
-        this.number = number;
+    public String getLatlong() {
+        return latlong;
+    }
+
+    public void setLatlong(String latlong) {
+        this.latlong = latlong;
+    }
+
+    public String getTime() {
+        return time;
+    }
+
+    public void setTime(String time) {
+        this.time = time;
     }
 
     public String getName() {
@@ -25,12 +48,20 @@ public class UserModel implements Serializable {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
+    public String getFullname() {
+        return fullname;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public void setFullname(String fullname) {
+        this.fullname = fullname;
+    }
+
+    public String getPhone() {
+        return phone;
+    }
+
+    public void setPhone(String phone) {
+        this.phone = phone;
     }
 
     public String getPassword() {
@@ -41,6 +72,14 @@ public class UserModel implements Serializable {
         this.password = password;
     }
 
+    public String getCpassword() {
+        return cpassword;
+    }
+
+    public void setCpassword(String cpassword) {
+        this.cpassword = cpassword;
+    }
+
     public String getNumber() {
         return number;
     }
@@ -48,4 +87,13 @@ public class UserModel implements Serializable {
     public void setNumber(String number) {
         this.number = number;
     }
+
+    public String getCode() {
+        return code;
+    }
+
+    public void setCode(String number) {
+        this.code = code;
+    }
+
 }
